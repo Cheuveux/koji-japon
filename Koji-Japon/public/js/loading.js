@@ -7,5 +7,5 @@ window.addEventListener("load", function() {
     // Supprime complètement le loader après la transition
     setTimeout(() => {
         loader.style.display = "none";
-    }, 1200); // Correspond au temps de transition en CSS (0.8s)
+    }, 1200); // Correspond au temps de transition en CSS (1.2s)
 });

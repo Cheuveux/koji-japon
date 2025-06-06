@@ -50,30 +50,32 @@ main.loaded {
   transform: translateY(0);
 }
 
+
 .titre-container {
 
-  position: relative;
-   width: 100%;
-   height: auto;
-   margin-top: 2rem;
-   margin-bottom: 2rem;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   position: relative;
+    width: 100%;
+    height: 12vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
 
-   font-size: 40px;
-   z-index: 1;
+    z-index: 1;
 }
 
 .titre-container h1 {
-   font-family: var(--title-font);
-   color: var(--font-color);
-   font-style: normal;
-   font-weight: 300;
-   letter-spacing: 10px;
+    font-family: var(--title-font);
+    color: var(--font-color);
+    font-style: normal;
+    font-weight: 450;
+    letter-spacing: 15px;
 
-   z-index: 2;
-   
+    z-index: 2;
+    font-size: 5rem;
+    
 }
 
 .gif-container {
@@ -111,7 +113,6 @@ margin-right: 10%;
 
 .description-text {
  
-  font-size: 1.2rem;
   color:var(--font-color);
   font-weight: 600;
   
@@ -130,34 +131,38 @@ margin-right: 10%;
   text-align: center;
 
   
-  font-weight: 800;
-  line-height: 1.5;
+  font-weight: 400;
+  font-style: italic;
+
+  font-size: 20px;
+  
+  
 }
 
 .description-text p:nth-child(2),
 .description-text p:nth-child(3) {
   margin-left: 10%;
-  letter-spacing: 2px;
   font-weight: 100;
+  line-height: 1.3;
 
-  line-height: 1;
-  word-spacing: 5px;
+  width: 72%;
+  
 }
 
 
 
-.description-text p:nth-child(3) {
-text-align: end;
 
-}
 
 .description-text p:last-child {
+  position: relative;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 4rem;
   font-weight: 800;
 
   line-height: 1.5;
   word-spacing: 5px;
+
+  font-size: 20px;
 }
 
 .img-description {
@@ -268,7 +273,6 @@ section:nth-child(2){
 section:last-child {
   background-color:#2D6D4B ;
   
-  margin-bottom: 5rem;
  
 }
 
@@ -491,7 +495,7 @@ to {opacity: 1}
   height: max-content;
   
 
-  padding: 25px; 
+ 
 
 }
 
@@ -503,82 +507,70 @@ to {opacity: 1}
 .evenement ul {
   display: flex;
   flex-direction: column;
-  gap: 1px;
-
-  list-style:none;
-  margin-left: 3rem;
-
-  letter-spacing: 2px;
-  word-spacing: 1px;
-  font-weight: 600;
-}
-
-.evenement .evenement-description p:first-child {
-  text-align: center;
-  line-height: 1.5;
-  word-spacing: 3px;
-  font-weight: 600;
-}
-.evenement .evenement-description p:nth-child(2) {
-  text-align: end;
-  letter-spacing: 1px;
   line-height: 1.1;
-  word-spacing: 1px;
 
-}
+  list-style:circle;
+  margin-left: 2.5rem;
 
-.convention .evenement-description p:first-child{
-  text-align: center;
-
-  letter-spacing: 1px;
-  word-spacing: 1px;
-  margin-bottom: 1rem;
-}
-
-.convention .evenement-description p:nth-child(2){
-  text-align: center;
-  line-height: 2;
-  font-weight: 600;
-
-  margin-bottom: 1rem;
-}
-.convention .evenement-description p:nth-child(3){
-  text-align: end;
-}
-.convention .evenement-description p:nth-child(4),
-.convention .evenement-description p:nth-child(5){
-  text-align: center;
-}
-.convention .evenement-description p:nth-child(5) {
- font-size: 16px;
   letter-spacing: 2px;
+  word-spacing: 1px;
+  font-weight: 400;
+  
+ 
 }
+
+
+.evenement .evenement-description p:nth-child(2) {
+ 
+  margin-bottom: 3rem;
+
+}
+.evenement .evenement-description p:nth-child(3) {
+ 
+  margin-bottom: 1rem;
+
+}
+.evenement .evenement-description p:last-child {
+  margin-top: 5rem;
+  text-align: center;
+  width: 90%;
+  letter-spacing: 2px;
+  font-style: italic;
+  font-weight: 400;
+}
+
+
+.convention .evenement-description p:nth-child(2),
+.convention .evenement-description p:nth-child(3){
+  margin-left: 2.5rem;
+
+}
+
+
+
+
+
 
 .convention .evenement-description p:last-child{
+  margin-top: 4rem;
   text-align: center;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 400;
+  font-style: italic;
 }
 
-.brocante .evenement-description {
-  height: 52vh;
-  justify-content: space-around;
-}
 
-.brocante .evenement-description p:first-child {
-  text-align: justify;
-  letter-spacing: 2px;
- 
-}
-.brocante .evenement-description p:nth-child(2){
-  text-align: end;
- 
-}
+
+
+
 
 .brocante .evenement-description p:last-child {
+  margin-top: 15rem;
   text-align: center;
-  letter-spacing: 2px;
-  font-weight: 600;
+  letter-spacing: 3px;
+  font-weight: 400;
+  font-style: italic;
+  padding: 0px 2rem;
 }
 
 
@@ -599,8 +591,8 @@ to {opacity: 1}
     display: flex;
     width: 100%;
     height: 7rem;
-    margin-top: 1rem;
-   margin-bottom: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     justify-content: center;
     align-items: center;
 }
@@ -608,21 +600,22 @@ to {opacity: 1}
 .titre-container h1 {
     font-family: var(--title-font);
     font-style: normal;
-    font-size: 25px;
-    font-weight: 300;
+    font-size: 1.5rem;
+    font-weight: 450;
     letter-spacing: 10px;
     
 }
 
 
 .description-container {
+  position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
   
-    min-height: 85vh;
+    min-height: 70vh;
     margin: 3%;
     
     gap: 10px;
@@ -631,44 +624,49 @@ to {opacity: 1}
 
 }
 .description-text {
+  
   width: 95%;
   font-weight: 300;
-  font-size: 12px;
+ 
   
   flex: 1;
   box-shadow: none;
 }
 
+
 .description-text p:first-child {
-  font-size: 14px;
-  line-height: 1.2;
-  word-spacing: 5px;
+  font-size: 15px;
+  margin: 2rem;
+  margin-top: 0;
+  text-align: center;
+
+  
+  font-weight: 400;
+  font-style: italic;
+  
+  
 }
+
 .description-text p:nth-child(2) {
-  margin-left: 50%;
-  letter-spacing: 0px;
+  margin-left: 0%;
   font-weight: 100;
-  line-height: 1.2;
-  word-spacing: 3px;
+  line-height: 1.3;
+
+  width: 92%;
+  text-align: start;
+  
 }
-
-
 
 .description-text p:nth-child(3) {
-  margin-left: 0;
-  padding-top: 1rem;
-  letter-spacing: 1px;
-  font-weight: 200;
-  text-align: center;
-  line-height: 1.5;
-  word-spacing: 2px;
-
+  display: none;
 }
 
 
 
 
 .description-text p:last-child {
+   position: absolute;
+   bottom: 10%;
   letter-spacing: 3px;
   font-size:13px;
   padding-bottom: 10px;
@@ -680,9 +678,10 @@ to {opacity: 1}
 
 .img-description {
   position: absolute;
-  left: 12%;
-  top: 7.5%;
-  width: 27vw;
+  display: flex;
+  left: 25%;
+  top: 40%;
+  width: 200px;
   height: min-content;
   
 
@@ -891,7 +890,7 @@ section:nth-child(2){
 .evenement-description {
   width: 100%;
   height: max-content;
-  text-align: end;
+ 
   
   margin-bottom: 1rem;
   padding: 20px;
@@ -902,43 +901,51 @@ section:nth-child(2){
 .evenement-description p {
  font-size: 12px;
  letter-spacing: 0px;
- font-weight: 700;
- margin-right: 0.5rem;
+ font-weight: 400;
+
 }
 
 .evenement .evenement-description {
-  text-align: center;
+  text-align: start;
   margin-bottom: 3rem;
   gap: 15px;
 }
 .evenement .evenement-description p:nth-child(2){
   display: none;
 }
-.evenement .evenement-description p:nth-child(3){
-  padding-top: 10px;
-  border-radius: 5px;
-  border-top: solid 2px;
-}
 
+
+.evenement .evenement-description p:last-child {
+  margin: 2rem 0px;
+  padding:  10px 1rem;
+  border-radius: 5px;
+  
+  border-top: solid 2px;
+  border-bottom: solid 2px;
+  width: 100%;
+
+}
 .evenement ul {
-  font-size: 12px;
+  text-align: center;
+  font-size: 11px;
   gap: 10px;
   padding-bottom: 10px;
-  border-radius: 5px;
-  border-bottom: solid 2px;
+  line-height: 1;
 
   margin-left: 0;
+  letter-spacing: 1px;
   
 }
 
 .convention .evenement-description{
-  gap: 15px;
+  gap: 10px;
 }
 
 .convention .evenement-description p:nth-child(2) {
   text-align: start;
-  letter-spacing: 2px;
+  letter-spacing: 0px;
   font-weight: 500;
+  margin-left: 0;
 }
 
 .convention .evenement-description p:nth-child(3),
@@ -947,7 +954,8 @@ display: none;
 }
 
 .convention .evenement-description p:last-child {
-  margin-top: 2rem;
+  margin-top:4rem;
+  margin-bottom:4rem;
   padding:10px;
 
   border-radius: 5px;
@@ -983,22 +991,10 @@ display: none;
   border-radius: 5px;
   border-bottom: solid 2px;
   border-top: solid 2px;
+
+  margin-top:4rem;
+  margin-bottom:4rem;
 }
 }
 
-@media screen and (max-width:550px) {
 
- 
-  .img-description {
-    left: 2%;
-    width:45vw;
-  }
-  .description-text p:nth-child(3) {
-    margin-left: 0;
-    margin-top: 0;
-    letter-spacing: 1px;
-    font-weight: 200;
-    text-align: center;
-  
-  }
-}

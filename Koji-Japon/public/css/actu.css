@@ -51,23 +51,27 @@ main {
 /* Style pour le loader */
 #loader {
     position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
-
+    width: 100vw;
+    height: 100vh;
+    background: #8249037c; 
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
-
-
-    /*Smooth transi askip*/
-
     opacity: 1;
     visibility: visible;
-    transition: opacity 3s ease-out, visibility 3s ease-out;
+    transform: scale(1);
+    transition: opacity 1.2s cubic-bezier(.4,0,.2,1), 
+                transform 1.2s cubic-bezier(.4,0,.2,1), 
+                visibility 1.2s;
 }
 
+#loader.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0.96);
+}
 
 
 /* Animation du spinner */
@@ -101,9 +105,9 @@ main {
 
    position: relative;
     width: 100%;
-    height: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    height: 12vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,11 +120,11 @@ main {
     font-family: var(--title-font);
     color: var(--font-color);
     font-style: normal;
-    font-weight: 300;
-    letter-spacing: 10px;
+    font-weight: 450;
+    letter-spacing: 15px;
 
     z-index: 2;
-    font-size: 4.5rem;
+    font-size: 5rem;
     
 }
 
@@ -160,6 +164,7 @@ section.visible {
     width: 100%;
     padding: 2%;
     margin-bottom: 5rem;
+    margin-top: 5rem;
     height: 75vh;
     font-size: 11px;
 }
@@ -168,7 +173,7 @@ section.visible {
     position: relative;
     display: flex;
     flex-direction:  row-reverse;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     
 
@@ -196,16 +201,34 @@ section.visible {
 .text-content p:first-child{
     
     text-align: justify;
+    width: 85%;
  
-    line-height: 1.5;
+    
    
 }
 .text-content p:nth-child(2) {
     width: 50%;
     font-size: 18px;
-    letter-spacing: 3px;
-    text-align: center;
+    margin-top: 4rem;
+    
+    text-align: start;
    
+}
+
+.text-content p:last-child {
+    margin-top: 10rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+
+    
+    padding-left: 50px;
+    padding-right: 50px;
+    
+    text-align: center;
+     font-size: 1.5rem;
+     font-style: italic;
+    width: 90%;
+    
 }
 
 .illu-text {
@@ -225,19 +248,7 @@ section.visible {
 
 
 
-.text-content p:last-child {
-    margin-top: 7rem;
-    letter-spacing: 2px;
-    font-weight: 400;
 
-    
-    padding-left: 50px;
-    padding-right: 50px;
-    
-    text-align: center;
-     font-size: 19px;
-    
-}
 
 
 
@@ -249,7 +260,7 @@ section.visible {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 
     overflow: hidden;
@@ -278,7 +289,7 @@ section.visible {
 
 .atelier {
     position: relative;
-    min-height: 100vh;
+   
    
     margin-top: 8rem;
     margin-bottom: 5rem;
@@ -362,28 +373,27 @@ margin-bottom: 2rem;
     text-align: start;
 }
 
-.atelier-text p:first-child,
-.atelier-text p:last-child {
+.atelier-text p:first-child {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
+    margin-bottom: 2.5rem;
 }
-.atelier-text p:nth-child(2) {
-    text-align: center;
-    line-height: 1.5;
-}
-
-.atelier-text p:nth-child(3),
+.atelier-text p:nth-child(2),
 .atelier-text p:nth-child(5) {
-    text-align: end;
-    padding-left: 50px;
+    text-align: start;
+    
 }
 
-.atelier-text p:nth-child(6) {
-    margin-top: 10px;
-    margin-bottom: 10px;
+
+
+.atelier-text p:last-child {
+    margin-top: 2.5rem;
+   
     text-align: center;
     letter-spacing: 3px;
+    font-style: italic;
+    font-weight:400 ;
 }
 
 
@@ -433,13 +443,13 @@ margin-bottom: 2rem;
 
 .gallery-illu {
     position: absolute;
-    bottom: 10%;
-    left: -2%;
+    bottom: -5%;
+    left: 28%;
 
    
     
     display: flex;
-    justify-content:end;
+    justify-content:start;
     
     width: 100%;
     
@@ -451,8 +461,8 @@ margin-bottom: 2rem;
 
 .kokeshi-illu{
    position: relative;
-    width: 220px;
-    height: 440px;
+    width: 200px;
+    height: 400px;
     
 }
 
@@ -468,36 +478,34 @@ margin-bottom: 2rem;
 }
 
 @media screen and (max-width:850px){
-    #loader {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.6); 
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
- 
-    
-    
-        /*Smooth transi askip*/
-    
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 3s ease-out, visibility 3s ease-out;
+     
+    br {
+        display: none;
     }
-    
-    
-    
-    /* Animation du spinner */
-    .spinner {
-       
-      
-       
-       width: 75px;
-       height: 115px;
-        animation: spin 1.2s linear infinite;
-    }
+  html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+  #loader {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+   
+  }
+  .spinner {
+    width: 105px;
+    height: 155px;
+    animation: spin 1.5s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     
     .spinner > img {
         width: 100%;
@@ -509,7 +517,7 @@ margin-bottom: 2rem;
         font-family: var(--title-font);
         font-style: normal;
         font-size: 2.5rem;
-        font-weight: 300;
+        font-weight: 450;
         letter-spacing: 10px;
         
     }
@@ -531,19 +539,25 @@ margin-bottom: 2rem;
     }
 
     .text-content {
-        width: 95%;
+        width: 100%;
+        margin-left: 2rem;
+        margin-right: 1rem;
     }
     .text-content p {
         font-size: 13px;
+        margin-bottom: 10px;
     }
     .text-content p:first-child {
+        width: 95%;
         font-weight: 100;
-        text-align: justify;
+        text-align: start;
     }
     .text-content p:nth-child(2) {
+       margin-top: 1rem;
+        width: 58%;
        letter-spacing: 0px;
-        font-size: 12px;
-        font-weight: 800;
+        font-size: 13px;
+        font-weight: 100;
         
     }
 
@@ -552,12 +566,12 @@ margin-bottom: 2rem;
     width: 40vw;
     height: 20vh;
 
-    top: 30%;
-    right: -1%;
+    top: 33%;
+    right: 0%;
 }
 
 .text-content p:last-child {
-    margin-top: 1rem;
+    margin-top: 5rem;
     letter-spacing: 2px;
     font-weight: 400;
 
@@ -608,7 +622,7 @@ margin-bottom: 2rem;
     .atelier {
         margin: 5%;
         margin-top: 0;
-        min-height: 150vh;
+       
 
         display: flex;
         flex-direction: column;
@@ -679,8 +693,7 @@ margin-bottom: 2rem;
 
     .atelier-text p:first-child {
     font-size: 15px;
-    font-weight: 600;
-    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .atelier-text p:nth-child(3),
@@ -692,11 +705,7 @@ margin-bottom: 2rem;
     margin-right: 0%;
 }
 
-.atelier-text p:nth-child(5) {
-   padding-left: 0;
-    text-align: justify;
-    letter-spacing: 3px;
-}
+
 
 .atelier-text p:nth-child(6),
 .atelier-text p:last-child {
@@ -711,7 +720,7 @@ margin-bottom: 2rem;
         max-width: 90%;
         min-height: 40vh;
 
-        margin-bottom: 5%;
+        margin-bottom: 2rem;
  
         
 
@@ -756,7 +765,7 @@ margin-bottom: 2rem;
 
     .gallery-illu {
         position: absolute;
-        top: 27%;
+        top: 30%;
         left: -4%;
     
        
@@ -770,8 +779,8 @@ margin-bottom: 2rem;
 
     .kokeshi-illu{
         position: relative;
-         width: 120px;
-         height: 210px;
+         width: 100px;
+         height: 200px;
         
          
      }
@@ -791,6 +800,7 @@ margin-bottom: 2rem;
         gap: 30px;
 
         text-align: center;
+        margin-bottom: 2rem;
      }
 
      .gallery-description p:first-child {
