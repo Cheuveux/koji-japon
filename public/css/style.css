@@ -1,0 +1,667 @@
+/*FICHIER DE STYLE GENERAL DU SITE + POUR LE HEADER*/
+
+/*JOST FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*MERRIWEATHER FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* M PLUS 1 CODE FONT(JAPAN FONT)*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+:root {
+  --header-color: #9F563A;
+  --main-color : #FFFF;
+  --font-color : #4A4033;
+  --jap-color : #9E3D2F;
+
+  --title-font : "Jost", serif;
+  --body-font : "Merriweather", serif;
+  --jap-font : "M PLUS 1 CODE", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+body {
+  background-color: #ffffff;
+
+
+  position: relative;
+  
+
+}
+
+
+main {
+  margin: 0; /* Supprime les marges par défaut */
+  
+}
+
+header {
+  background-color:#592C63;
+  color: var(--main-color);
+  font-family: var(--title-font);
+
+  z-index: 1;
+}
+
+.navbar_bigo {
+  display: none;
+}
+
+.navbar {
+  width: 100%;
+  height: 15vh;
+
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+}
+.logo a {
+  text-decoration: none;
+  color: var(--main-color);
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  
+}
+.logo {
+  position: absolute;
+  margin-left: 2rem ;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  
+  font-size: 20px;
+  font-weight: 800;
+
+  
+  border:solid transparent 2px;
+  border-radius: 3%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+  0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+
+.menu-items  {
+  height: auto;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  list-style: none;
+  position: absolute;
+}
+
+.japNav {
+  font-family: var(--jap-font);
+  position: relative;
+  top: 7vh;
+
+  color: #9768a1;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  
+  z-index: 0;
+}
+
+
+
+.menu-items h2 {
+
+  position: absolute;
+  top: 11.5vh;
+  text-decoration: none;
+  font-weight:800;
+  color:  var(--main-color);
+  z-index: 1;
+}
+
+.menu-items .navLink .active .japNav {
+  color: var(--main-color);
+}
+.menu-items .navLink .active {
+  color: #9768a1;
+}
+
+
+/*FOOTER*/
+
+footer {
+ 
+  position: relative;
+
+ 
+  
+
+  width: 100%;
+  height: 150px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: #FBE251;
+  padding: 10px 0;
+
+  border-top: #592C63 solid 4px;
+}
+
+
+.footer-anim {
+  display: flex;
+  height: 130px;
+  width: 115px;
+
+  position: absolute;
+  left: 48%;
+  top: 3%; 
+ 
+  
+   
+  /*animation:moveIcon 5s infinite ease-in-out;*/  /* Animation fluide et infinie */
+}
+
+.footer-anim> img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: none;
+}
+
+.footer-description {
+  position: relative;
+  display: flex;
+ 
+ 
+
+ 
+  width: 100%;
+}
+
+
+
+.liens-footer {
+  color: var(--font-color);
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+
+  gap: 25px;
+
+}
+
+.liens-footer a:hover  {
+        animation: scale 0.8s infinite alternate;  
+    }
+
+
+    @keyframes scale{
+      0% {
+          transform: scale(1);
+          
+      }
+      50% {
+          transform: scale(1.1);
+          
+      }
+      100% {
+          transform: scale(1);
+        
+      }
+  }
+
+
+    
+
+.icone-reseaux {
+  
+  height: 25px;
+  width: 25px;
+
+
+}
+
+
+.footer-info {
+  color: var(--font-color);
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  margin-right: 2rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+}
+
+@media screen and (max-width:850px) {
+  .japNav {
+    font-family: var(--jap-font);
+    position: relative;
+    top: 9.5vh;
+  
+    color: var(--jap-color);
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0;
+    
+    z-index: 0;
+  }
+  
+  
+  
+  .navLink {
+  
+    position: absolute;
+    top: 12vh;
+    text-decoration: none;
+    font-weight:800;
+    color:  var(--main-color);
+    z-index: 1;
+  }
+
+  /* FOOTER */
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    height: 90px;
+    padding: 10px;
+    width: 100%;
+
+
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #FBE251;
+  padding: 10px 0;
+  }
+
+  .footer-description {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   
+
+   
+    width: 100%;
+  }
+
+  .liens-footer {
+    margin-left: 0;
+    gap: 10px;
+    font-size: 13px;
+    margin-left: 5px;
+
+    margin-bottom: 0%;
+    font-weight: 700;
+    
+    
+  
+  }
+
+  .icone-reseaux {
+  
+    height: 15px;
+    width: 15px;
+  
+  
+  }
+  
+  
+ 
+
+  .footer-info {
+    font-size: 9px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+    position: absolute;
+    bottom:  15%;
+    
+    margin-right: 0.5rem;
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  .footer-anim {
+    display: flex;
+    height: 90px;
+    width: 81px;
+  
+    position: absolute;
+    left: 44%; 
+    right: 25%;
+    top: 5%;
+   
+    
+     
+    /*animation:moveIcon 5s infinite ease-in-out;*/  /* Animation fluide et infinie */
+  }
+  
+  .footer-anim> img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: none;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .navbar {
+    display: none;
+  }
+  .container {
+    max-width: 1050px;
+    width: 90%;
+  }
+  
+  .navbar_bigo {
+    position: relative;
+    display: flex;
+    width: 100%;
+    box-shadow:  0 3px 12px rgba(21, 23, 24, 0.15);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 62px;
+
+    z-index: 3;
+  }
+  
+  .navbar_bigo .menu-items_bigo {
+    display: flex;
+  }
+  
+  .navbar_bigo .nav-container li {
+    list-style: none;
+   
+  }
+  
+   .navLink{
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+  }
+
+  
+ 
+
+  .logo {
+    position: absolute;
+    top: 25%;
+    right: -10%;
+    margin-right: 10px;;
+    margin-top: 0rem;
+    
+    
+    font-size: 20px;
+    font-weight: 800;
+  
+    border:solid transparent 2px;
+    border-radius: 3%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+    0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: var(--main-color);
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+  }
+  
+  .nav-container .checkbox {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    left: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .nav-container .hamburger-lines {
+    display: block;
+    height: 16px;
+    width: 32px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .nav-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--main-color);
+  }
+  
+  .nav-container .hamburger-lines .line1 {
+    width: 70%;
+    transform-origin: center;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .nav-container .hamburger-lines .line2 {
+    width: 100%;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+ 
+  
+  .navbar_bigo .menu-items_bigo {
+    padding-top: 5rem;
+    height: 100vh;
+    width: 120%;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    transition: transform 0.5s ease-in-out;
+    text-align: center;
+    background-color: #592C63;
+   
+  }
+  
+  
+ .menu-items_bigo li {
+   position: relative;
+    height: 5rem;
+    display: flex;
+    flex-direction: column ;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.menu-items_bigo .japNav {
+  
+  width: 90%;
+  height: 50px;
+  font-size: 3rem;
+  color: #9768a1;
+  z-index: 0;
+
+}
+ .menu-items_bigo a {
+    position: relative;
+    top: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    z-index: 1;
+  }
+  
+
+  
+
+  
+  .nav-container input[type="checkbox"]:checked ~ .menu-items_bigo {
+    transform: translateX(0);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg) translateY(10px);
+    width: 100%;
+  
+  }
+  
+
+  .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+  
+  .nav-container input[type="checkbox"]:checked ~ .logo{
+    display: none;
+  }
+  
+  
+
+ .menu-items_bigo .current {
+    color: var(--main-color);
+    
+  }
+  .menu-items_bigo .active {
+   
+    color: #9768a1;
+  }
+
+ 
+  /* FOOTER */
+
+  footer {
+    position: absolute;
+    top: -100;
+    height: 120px;
+    padding: 10px;
+
+
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #FBE251;
+  padding: 10px 0;
+  }
+
+  .footer-description {
+    display: flex;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+   
+
+   
+    width: 100%;
+  }
+
+  .liens-footer {
+    margin-left: 0;
+    gap: 10px;
+    font-size: 12px;
+    margin-left: 5px;
+
+    margin-bottom: 0%;
+    font-weight: 700;
+    
+    
+  
+  }
+
+  .icone-reseaux {
+  
+    height: 15px;
+    width: 15px;
+  
+  
+  }
+  
+  
+ 
+
+  .footer-info {
+    font-size: 7px;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+    position: absolute;
+    bottom:  10%;
+    
+    margin-right: 0.25rem;
+
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    
+  }
+
+  .footer-anim {
+    display: flex;
+    height: 90px;
+    width: 81px;
+  
+    position: absolute;
+    left: 44%; 
+    right: 25%;
+    top: 5%;
+   
+    
+     
+    /*animation:moveIcon 5s infinite ease-in-out;*/  /* Animation fluide et infinie */
+  }
+  
+  .footer-anim> img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: none;
+  }
+}
+

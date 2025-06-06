@@ -1,0 +1,1004 @@
+/*JOST FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*MERRIWEATHER FONT*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+
+/* M PLUS 1 CODE FONT(JAPAN FONT)*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
+
+
+
+   
+
+
+:root {
+  --header-color: #9F563A;
+  --main-color : #F3E8D5;
+  --font-color : #4A4033;
+  --jap-color : #9E3D2F;
+
+  --title-font : "Jost", serif;
+  --body-font : "Merriweather", serif;
+  --jap-font : "M PLUS 1 CODE", sans-serif;
+}
+  
+body {
+    font-family: var(--body-font);
+    
+    
+
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column; 
+    
+    
+    
+}
+main {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+}
+
+main.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titre-container {
+
+  position: relative;
+   width: 100%;
+   height: auto;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   font-size: 40px;
+   z-index: 1;
+}
+
+.titre-container h1 {
+   font-family: var(--title-font);
+   color: var(--font-color);
+   font-style: normal;
+   font-weight: 300;
+   letter-spacing: 10px;
+
+   z-index: 2;
+   
+}
+
+.gif-container {
+   position: absolute;
+   width: 100vw;
+   height: 100%;
+
+  
+   z-index: 0; 
+}
+
+
+.background-gif {
+       position: absolute;
+       object-fit: contain;
+       width: 100vw; 
+       height: 100%; 
+   
+}
+
+.description-container {
+height: 80vh;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+
+gap: 25px;
+
+margin-top: 7rem;
+margin-left: 5%;
+margin-right: 10%;
+
+
+}
+
+.description-text {
+ 
+  font-size: 1.2rem;
+  color:var(--font-color);
+  font-weight: 600;
+  
+  width: 60%;
+  
+  
+}
+.description-text p {
+  margin-bottom: 25px;
+}
+
+.description-text p:first-child {
+  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+
+  
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.description-text p:nth-child(2),
+.description-text p:nth-child(3) {
+  margin-left: 10%;
+  letter-spacing: 2px;
+  font-weight: 100;
+
+  line-height: 1;
+  word-spacing: 5px;
+}
+
+
+
+.description-text p:nth-child(3) {
+text-align: end;
+
+}
+
+.description-text p:last-child {
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 800;
+
+  line-height: 1.5;
+  word-spacing: 5px;
+}
+
+.img-description {
+  width: 30vw;
+  height: min-content;
+
+ 
+  
+
+  flex-shrink: 0;
+ 
+}
+
+.img-description > img {
+  display: flex;
+
+  width: 100%;
+
+}
+
+
+
+
+section {
+  position: relative;
+  width: auto;
+
+  height: 90vh;
+
+  color:#FAF5EF;
+  
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+  
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: inherit; /* Hérite de la couleur de fond de la section */
+  transform: translateY(-50%);
+  z-index: 10;
+}
+section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: inherit; /* Hérite de la couleur de fond de la section */
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+section::before {
+  top: -30px;
+  border-radius: 45% 45% 0 0;
+  transform: translateY(-50%) ;
+}
+section::after{
+  bottom: -10px;
+  border-radius: 0 0 45% 45%;
+  transform: translateY(50%);
+}
+
+
+section:first-child {
+background-color: #165E83;
+}
+
+.evenement .jap-titre {
+  color: #436473;
+}
+
+.evenement .prev,
+.evenement .next {
+  color:#446473 ;
+}
+
+
+section:nth-child(2){
+  padding-top: 5rem;
+  background-color: #9E3D2F;
+  height: 100vh;
+  
+}
+
+.convention .jap-titre {
+  color: #9F563A;
+}
+
+.convention .prev,
+.convention .next {
+  color: #9F563A;
+}
+
+
+section:last-child {
+  background-color:#2D6D4B ;
+  
+  margin-bottom: 5rem;
+ 
+}
+
+.brocante .jap-titre {
+  color: #203329;
+}
+.brocante .prev,
+.brocante .next {
+  color: #203329;
+}
+
+section:nth-child(2)::before {
+  top: 0px;
+  border-radius: 45% 45% 0 0;
+  transform: translateY(-50%);
+}
+section:last-child::after{
+  z-index: 10;
+  bottom: 0px;
+  border-radius: 0 0 45% 45%;
+  transform: translateY(50%);
+}
+
+
+
+
+
+.evenement-titre {
+  font-size: 60px;
+  position: relative;
+  width: 100%;
+  height:max-content;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 20;
+  margin-bottom: 5rem;
+
+}
+
+.jap-titre {
+  position: absolute;
+  z-index: 0;
+  
+
+  font-family: var(--jap-font);
+  font-size: 100px;
+  color: var(--jap-color);
+}
+
+.fr-titre {
+  position: relative;
+  z-index: 1;
+
+  color: var(--main-color);
+  font-family: var(--title-font);
+  font-size: 75px;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+
+
+
+
+.evenement-content {
+
+  position: relative;
+  
+  
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-around;
+  align-items: start;
+
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+
+/*Image slider des différents types d'évenements*/
+
+.evenement-diapo {
+  
+  position: relative;
+  display: flex;
+  width: 40%;
+  height: 62vh;
+
+  
+  left: 0;
+  
+
+  border-radius: 5px;
+  background-color: #2c262637;
+
+}
+
+.img-slide {
+  
+  display: none;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+ 
+
+  
+}
+
+.img-slide>img,
+.img-slide>video {
+  display: flex;
+
+  
+  width: 100%;
+  height: 95%;
+  margin:3% ;
+
+  object-fit: contain;
+  position: absolute;
+  top: -3%;
+ 
+}
+
+video {
+  image-rendering: auto;
+  object-fit: cover; /* Ou "contain" selon l'affichage souhaité */
+  filter: brightness(1) contrast(1);
+}
+
+
+
+ .portrait{
+ display: flex;
+ width: 400px;
+ height: 100%;
+}
+
+.img-slide >.landscape {
+  display: flex;
+  width: 100%;
+}
+
+
+
+
+.prev, .next {
+  
+  position: absolute;
+  top: 50%;
+
+  cursor: pointer;
+  padding: 16px;
+  
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+ 
+}
+
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 10;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(252, 250, 250, 0.142);
+}
+
+
+/* Caption text */
+.slide-description{
+  color: var(--main-color);
+  font-weight: 900;
+  font-size: 15px;
+  position: absolute;
+  text-align: center;
+  right: 15px;
+  top: 90%;
+  box-shadow:  0 5px 12px rgba(21, 23, 24, 0.15);
+
+}
+
+/* Fading animation */
+.fade {
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+
+
+
+.evenement-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+ 
+ 
+
+  width: 45%;
+  height: max-content;
+  
+
+  padding: 25px; 
+
+}
+
+.evenement-description p {
+  font-weight: 100;
+  font-size: 17px;
+}
+
+.evenement ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  list-style:none;
+  margin-left: 3rem;
+
+  letter-spacing: 2px;
+  word-spacing: 1px;
+  font-weight: 600;
+}
+
+.evenement .evenement-description p:first-child {
+  text-align: center;
+  line-height: 1.5;
+  word-spacing: 3px;
+  font-weight: 600;
+}
+.evenement .evenement-description p:nth-child(2) {
+  text-align: end;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  word-spacing: 1px;
+
+}
+
+.convention .evenement-description p:first-child{
+  text-align: center;
+
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.convention .evenement-description p:nth-child(2){
+  text-align: center;
+  line-height: 2;
+  font-weight: 600;
+
+  margin-bottom: 1rem;
+}
+.convention .evenement-description p:nth-child(3){
+  text-align: end;
+}
+.convention .evenement-description p:nth-child(4),
+.convention .evenement-description p:nth-child(5){
+  text-align: center;
+}
+.convention .evenement-description p:nth-child(5) {
+ font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.convention .evenement-description p:last-child{
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.brocante .evenement-description {
+  height: 52vh;
+  justify-content: space-around;
+}
+
+.brocante .evenement-description p:first-child {
+  text-align: justify;
+  letter-spacing: 2px;
+ 
+}
+.brocante .evenement-description p:nth-child(2){
+  text-align: end;
+ 
+}
+
+.brocante .evenement-description p:last-child {
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:850px){
+
+  .img-histo-description {
+    display: none;
+  }
+
+  .titre-container {
+    display: flex;
+    width: 100%;
+    height: 7rem;
+    margin-top: 1rem;
+   margin-bottom: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre-container h1 {
+    font-family: var(--title-font);
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 300;
+    letter-spacing: 10px;
+    
+}
+
+
+.description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  
+    min-height: 85vh;
+    margin: 3%;
+    
+    gap: 10px;
+    font-size: 13px;
+    box-shadow: none;
+
+}
+.description-text {
+  width: 95%;
+  font-weight: 300;
+  font-size: 12px;
+  
+  flex: 1;
+  box-shadow: none;
+}
+
+.description-text p:first-child {
+  font-size: 14px;
+  line-height: 1.2;
+  word-spacing: 5px;
+}
+.description-text p:nth-child(2) {
+  margin-left: 50%;
+  letter-spacing: 0px;
+  font-weight: 100;
+  line-height: 1.2;
+  word-spacing: 3px;
+}
+
+
+
+.description-text p:nth-child(3) {
+  margin-left: 0;
+  padding-top: 1rem;
+  letter-spacing: 1px;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.5;
+  word-spacing: 2px;
+
+}
+
+
+
+
+.description-text p:last-child {
+  letter-spacing: 3px;
+  font-size:13px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-radius: 5%;
+  border-bottom: solid 2px var(--header-color);
+  border-top: solid 2px var(--header-color);
+}
+
+.img-description {
+  position: absolute;
+  left: 12%;
+  top: 7.5%;
+  width: 27vw;
+  height: min-content;
+  
+
+  flex-shrink: 0;
+ 
+}
+
+.img-description > img {
+  display: flex;
+
+  width: 100%;
+
+} 
+
+
+
+section{
+height: 100%;
+width: auto;
+
+
+}
+section:nth-child(2){
+  height: min-content;
+  margin-bottom: 3rem;
+}
+
+
+.evenement-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    height: max-content;
+    margin-bottom: 2rem;
+}
+
+.evenement-titre:first-child{
+    margin-top: 0rem;
+    height: max-content;
+}
+
+.jap-titre {
+    position: relative;
+    top: 5px;
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--jap-color);
+    z-index: 0;
+    width: 100%;
+    letter-spacing: 0px;
+    text-align: center;
+    
+  
+}
+
+.fr-titre {
+
+    position: absolute;
+    font-size: 20px;
+    font-family: var(--title-font);
+    font-weight: 250;
+    font-size: 3rem;
+    
+    z-index: 1;
+    bottom: 30%;
+}
+
+
+
+
+
+
+
+.evenement-content {
+
+  
+  display: flex;
+  flex-direction: column;
+
+ justify-content: center; 
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+}
+
+.evenement-diapo {
+  display: flex;
+  justify-content: center;
+    width: 92%;
+    height: 40vh;
+    position: relative;
+    
+}
+
+.img-slide {
+    
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 5rem;
+    width: 300px;
+    height: 39vh;
+
+    
+}
+
+
+
+.img-slide>img,
+.img-slide>video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+    object-fit: contain;
+    position: relative;
+    left: 0%;
+}
+
+.img-slide >  .portrait{
+  display: flex;
+  width: 100%;
+ }
+
+ 
+
+ 
+ .img-slide >.landscape {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+  
+   
+ }
+
+
+ 
+
+
+  .prev, .next {
+    
+    position: absolute;
+    top: 50%;
+
+    cursor: pointer;
+    padding: 16px;
+    color: #AB4318;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+   
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 0;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(252, 250, 250, 0.142);
+  }
+  
+  /* Caption text */
+  .slide-description{
+    color: var(--main-color);
+    font-weight: 900;
+    font-size: 11px;
+    position: absolute;
+    text-align: end;
+    right: 15px;
+    top: 95%;
+    box-shadow:  0 5px 12px rgba(21, 23, 24, 0.15);
+  
+  }
+
+  /* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.evenement-description {
+  width: 100%;
+  height: max-content;
+  text-align: end;
+  
+  margin-bottom: 1rem;
+  padding: 20px;
+
+ 
+}
+
+.evenement-description p {
+ font-size: 12px;
+ letter-spacing: 0px;
+ font-weight: 700;
+ margin-right: 0.5rem;
+}
+
+.evenement .evenement-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  gap: 15px;
+}
+.evenement .evenement-description p:nth-child(2){
+  display: none;
+}
+.evenement .evenement-description p:nth-child(3){
+  padding-top: 10px;
+  border-radius: 5px;
+  border-top: solid 2px;
+}
+
+.evenement ul {
+  font-size: 12px;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  border-bottom: solid 2px;
+
+  margin-left: 0;
+  
+}
+
+.convention .evenement-description{
+  gap: 15px;
+}
+
+.convention .evenement-description p:nth-child(2) {
+  text-align: start;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.convention .evenement-description p:nth-child(3),
+.convention .evenement-description p:nth-child(5) {
+display: none;
+}
+
+.convention .evenement-description p:last-child {
+  margin-top: 2rem;
+  padding:10px;
+
+  border-radius: 5px;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+
+}
+
+.brocante .evenement-description {
+  height: max-content;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.brocante .evenement-description p:first-child {
+  font-weight: 100;
+  text-align: start;
+  letter-spacing: 0px;
+ 
+}
+.brocante .evenement-description p:nth-child(2){
+  text-align: end;
+ 
+}
+
+.brocante .evenement-description p:last-child {
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: solid 2px;
+  border-top: solid 2px;
+}
+}
+
+@media screen and (max-width:550px) {
+
+ 
+  .img-description {
+    left: 2%;
+    width:45vw;
+  }
+  .description-text p:nth-child(3) {
+    margin-left: 0;
+    margin-top: 0;
+    letter-spacing: 1px;
+    font-weight: 200;
+    text-align: center;
+  
+  }
+}

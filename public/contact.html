@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  
+    <link rel="stylesheet" type= "text/css" href="css/style.css?v=1.0.1">
+    <link rel="stylesheet" type= "text/css" href="css/contact.css?v=1.0.1">
+
+
+    <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+        emailjs.init({
+          publicKey: "qkFjmB-V-LoqNpYuP",
+        });
+    })();
+  </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koji-Japon</title>
+
+</head>
+<body>
+  
+
+
+  <div id="header"></div>  <!-- Le header sera injecté ici -->
+
+  <main>
+
+    <div class="titre-container">
+     <h1>CONTACTEZ-NOUS</h1>
+      
+      
+      <div class="gif-container">
+        <img src="docu_ressources/anim_bol/anim_bol.gif" alt="" class="background-gif">
+      </div>
+    </div>
+    
+    
+    
+    <div class="formulaire-description">
+    <p>Le présent formulaire de contact est destiné exclusivement à un démarchage commerçant et professionnel. Merci de remplir une des catégories d'objets ci-dessous pour orienter votre demande.
+   
+    Toute autres formes de demande (des questions concernant des événements ou des produits) devront être formulées directement sur le compte instagram de Koji-Japon, et ne feront pas l'objet de réponse si elles sont ici adressées.</p>
+
+    <p>Merci de bien vouloir joindre une adresse mail valide  afin que nos équipes puissent vous répondre dans les plus brefs délais. </p>
+    </div>
+
+      <div class="contact-form-container">
+
+        <div class="contact-form-titre">
+          <div class="jap-titre"><h2>お問い合わせフォーム </h2></div>
+          <div class="fr-titre"> <h2>Formulaire de Contact</h2></div>
+          
+
+        </div>
+        <form id="contactForm">
+
+          <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" placeholder="Votre email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contactReason">Objet de contact :</label>
+            <select id="contactReason" name="contactReason" required>
+              <option value="" disabled selected>Sélectionnez un objet</option>
+              <option value="Inivtation-evenement">Invitation à un événement</option>
+              <option value="Partenariat">Demande de partenariat</option>
+              
+              <option value="Vente_pro">Vente professionnelle d'objets</option>
+              <option value="other">Autre</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message :</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+          </div>
+
+          <button type="button" onclick="sendEmail()">Envoyer</button>
+        </form>
+
+
+        <div id="successMessage"  class="hidden"  >
+
+          <div class="text-container"  >
+            <div class="japMessage">メッセージが正常に送信されました !  |</div>
+            <div class="frMessage"> Votre message a été envoyé avec succès !  |</div>
+          </div>
+          <div class="text-container">
+            <div class="japMessage">メッセージが正常に送信されました !  |</div>
+            <div class="frMessage"> Votre message a été envoyé avec succès !  |</div>
+          </div>
+          <div class="text-container">
+            <div class="japMessage">メッセージが正常に送信されました !  |</div>
+            <div class="frMessage"> Votre message a été envoyé avec succès !  |</div>
+          </div>
+
+        </div>
+
+
+        <div id="errorMessage" class="hidden" >
+        
+          <div class="text-container">
+            <div class="japMessage">メッセージの送信中にエラーが発生しました |</div>
+            <div class="frMessage"> Une erreur est survenue lors de l'envoi du message |</div>
+          </div>
+          <div class="text-container">
+            <div class="japMessage">メッセージの送信中にエラーが発生しました。</div> 
+            <div class="frMessage">Une erreur s'est produite lors l'envoi de votre message.</div>
+        </div>
+          <div class="text-container">
+            <div class="japMessage">メッセージの送信中にエラーが発生しました。</div> 
+            <div class="frMessage">Une erreur s'est produite lors l'envoi de votre message.</div>
+        </div>
+      </div>
+
+     
+  </main>
+  <div class="illu-contact">
+    <img class="poisson" src="docu_ressources/illu/5.png" alt="">
+  </div>
+
+  <div id="footer"></div>
+  
+  <script src="js/nav.js?v=1.0.1"></script>
+  <script src="js/footer.js?v=1.0.1"></script>
+  <script src="js/contact.js?v=1.0.1"></script>
+  <script src="js/anim_main.js?v=1.0.1"></script>
+  <script src="js/anim_poisson.js"></script>
+
+</body>
+</html>
