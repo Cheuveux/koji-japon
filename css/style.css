@@ -14,10 +14,10 @@
 :root {
   --header-color:/* #a32e23f7 ROUGE VIF*/ /*#c57112 ORANGE VIF*/ #035882 /*BLEU PROFOND*/ /* #2D6D4B VERT PROFOND*/ 
  /* #77428D VIOLET SATURE*/;
-  --footer-color:/*BEIGE CLAIR  #e5c9a2*/ /*JAUNE CLAIR #e7d659 */ /* #A59ACA VIOLET LIGHT*/ #A59ACA;
-  --main-color : #FFFF;
+  --footer-color:/*BEIGE CLAIR  #e5c9a2*/ /*JAUNE CLAIR #e7d659 */ /* #A59ACA VIOLET LIGHT*/ #035882;
+  --main-color : #F8F6F0;
   --font-color : #4A4033;
-  --jap-color :/* #c57112 ORANGE VIF*/ /*#965c1e MARRON BEIGE*/ /*BLEU GRIS #567f94*/ /*#527f67 VERT LIGHT*/ #A59ACA /*VIOLET LIGHT*/;
+  --jap-color :#a32e23f7;
 
   --title-font : "Jost", serif;
   --body-font : "Merriweather", serif;
@@ -32,14 +32,20 @@
   scroll-behavior: smooth;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+ 
+
 }
+html, body, * {
+  cursor: url('../docu_ressources/redketchup/favicon-32x32.png'), auto;
+}
+
 *::-webkit-scrollbar {
   display: none;
 }
 
 
 body {
-  background-color:#F8F6F0;
+  
   width: 100%;
   
   box-sizing: border-box;
@@ -147,10 +153,10 @@ header {
   z-index: 1;
 }
 
-.menu-items .navLink .active .japNav {
+.menu-items .navLink.active .japNav {
   color: var(--main-color);
 }
-.menu-items .navLink .active {
+.menu-items .navLink.active h2 {
   color: var(--jap-color);
 }
 
@@ -166,7 +172,7 @@ footer {
   
 
   width: 100%;
-height: fit-content;
+  height: 100px;
 
 
   display: flex;
@@ -176,7 +182,7 @@ height: fit-content;
  background-color: var(--footer-color);
   padding : 10px;
 
-border-bottom: solid grey 2px;
+border-bottom: solid var(--jap-color) 12px;
 
 
 }
@@ -184,7 +190,7 @@ border-bottom: solid grey 2px;
 
 .footer-anim {
   display: flex;
-  height: 120px;
+  height: 100px;
   width: 105px;
 
   position: absolute;
@@ -209,13 +215,14 @@ border-bottom: solid grey 2px;
  
  
 
- 
+ height: 100%;
   width: 100%;
 }
 
 
 
 .liens-footer {
+  /* width: 100%;pour centrer les icones*/
   color: var(--font-color);
   font-weight: 800;
   font-size: 18px;
@@ -226,7 +233,7 @@ border-bottom: solid grey 2px;
   margin-bottom: 2%;
   margin-top: 2%;
 
-  gap: 25px;
+  gap: 50px;
 
 }
 
@@ -255,15 +262,20 @@ border-bottom: solid grey 2px;
 
 .icone-reseaux {
   
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
 
 
 }
 
 
+
+
+
+
 .footer-info {
-  color: var(--font-color);
+  font-size: 11px;
+  color: var(--main-color);
   position: absolute;
   bottom: 0px;
   right: 0;
@@ -329,10 +341,11 @@ border-bottom: solid grey 2px;
   
   }
 
-  .icone-reseaux {
+  .icone-reseaux svg{
   
-    height: 15px;
-    width: 15px;
+    filter: brightness(0) invert(1);
+    height: 125px;
+    width: 125px;
   
   
   }
@@ -341,7 +354,7 @@ border-bottom: solid grey 2px;
  
 
   .footer-info {
-    font-size: 9px;
+    font-size: 7px;
     font-weight: 100;
     letter-spacing: 1px;
 

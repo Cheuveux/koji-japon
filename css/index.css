@@ -11,21 +11,22 @@
 :root {
   --header-color:/* #a32e23f7 ROUGE VIF*/ /*#c57112 ORANGE VIF*/ #035882 /*BLEU PROFOND*/ /* #2D6D4B VERT PROFOND*/ 
  /* #77428D VIOLET SATURE*/;
-  --footer-color:/*BEIGE CLAIR  #e5c9a2*/ /*JAUNE CLAIR #e7d659 */ /* #A59ACA VIOLET LIGHT*/ #A59ACA;
-  --main-color : #FFFF;
+  --footer-color:/*BEIGE CLAIR  #e5c9a2*/ /*JAUNE CLAIR #e7d659 */ /* #A59ACA VIOLET LIGHT*/ #035882;
+  --main-color : #F8F6F0;
   --font-color : #4A4033;
-  --jap-color :/* #c57112 ORANGE VIF*/ /*#965c1e MARRON BEIGE*/ /*BLEU GRIS #567f94*/ /*#527f67 VERT LIGHT*/ #A59ACA /*VIOLET LIGHT*/;
+  --jap-color :#a32e23f7;
 
   --title-font : "Jost", serif;
   --body-font : "Merriweather", serif;
   --jap-font : "M PLUS 1 CODE", sans-serif;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
- 
+
+ cursor: url('../docu_ressources/redketchup/android-chrome-192x192.png'), auto;
  
 }
 body{
@@ -102,7 +103,7 @@ svg {
   letter-spacing: 3px;
   
 
-  stroke: #000;
+  stroke: var(--jap-color) ;
   fill: transparent;
   stroke-width: 1;
   stroke-dasharray: 1000;
@@ -135,14 +136,14 @@ svg {
   width: 100%;
   height: 100%;
 
-  font-family: #035882;
+  font-family: var(--jap-color);
   
   
   font-size: 1.3rem;
   font-weight: 400;
   letter-spacing: 2px;
 
-  stroke: #035882;
+  stroke: var(--jap-color);
   fill: transparent;
   stroke-width: 1.5;
   stroke-dasharray: 1000; /* Longueur du trait */
@@ -208,7 +209,7 @@ svg {
   }
   
   20% {
-    fill: #000; /* Remplissage restant (pour qu'il reste coloré après l'animation) */
+    fill: var(--jap-color); /* Remplissage restant (pour qu'il reste coloré après l'animation) */
   }
 
   100% {
