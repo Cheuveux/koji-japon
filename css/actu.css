@@ -652,7 +652,7 @@ margin-bottom: 2rem;
     .atelier-titre h1 {
         font-family:var(--jap-font);
         font-size: 2rem;
-        color: var(--header-color);
+      
         
     
         font-weight: 900;
@@ -814,7 +814,9 @@ margin-bottom: 2rem;
      .gallery-description p:last-child {
         letter-spacing: 0px;
         font-size: 18px;
+        font-style: italic;
         font-weight: 700;
+        color: #5D3A1A;
      }
     
 }

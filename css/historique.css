@@ -629,7 +629,7 @@ to {opacity: 1}
   width: 100%;
   font-weight: 300;
  
-  
+  min-height: 45vh;
   flex: 1;
   box-shadow: none;
 }

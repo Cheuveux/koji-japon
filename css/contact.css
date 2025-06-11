@@ -538,6 +538,9 @@ label {
     top: 10px;
     
   }
+  label {
+    font-size: 13px;
+  }
   
   #contactReason {
     width: 90%;
