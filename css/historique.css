@@ -381,8 +381,9 @@ section:last-child::after{
 .img-slide {
   
   display: none;
-  margin-top: 3rem;
-  margin-bottom: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 100%;
  
 
   
@@ -398,8 +399,8 @@ section:last-child::after{
   margin:3% ;
 
   object-fit: contain;
-  position: absolute;
-  top: -3%;
+  position: relative;
+
  
 }
 
@@ -691,7 +692,7 @@ to {opacity: 1}
 }
 
 .img-description > img {
-  display: flex;
+  display: block;
 
   width: 100%;
 

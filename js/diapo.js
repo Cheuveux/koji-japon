@@ -34,12 +34,29 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initialisation du diaporama
         showSlides(slideIndex, container, slides);
 
-        // Ajouter les écouteurs d'événements aux boutons
         container.querySelector('.prev')?.addEventListener('click', () => plusSlides(-1, container, slides));
         container.querySelector('.next')?.addEventListener('click', () => plusSlides(1, container, slides));
+
+        // Ajout du swipe (touch events)
+        let startX = null;
+        container.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+        container.addEventListener('touchend', (e) => {
+            if (startX === null) return;
+            let endX = e.changedTouches[0].clientX;
+            let diff = endX - startX;
+            if (Math.abs(diff) > 50) { // seuil de swipe
+                if (diff < 0) {
+                    plusSlides(1, container, slides); // swipe gauche → droite
+                } else {
+                    plusSlides(-1, container, slides); // swipe droite → gauche
+                }
+            }
+            startX = null;
+        });
     });
 });
-
 // Fonction pour changer de slide
 function plusSlides(n, container, slides) {
     let currentIndex = Array.from(slides).findIndex(slide => slide.style.display !== 'none');
