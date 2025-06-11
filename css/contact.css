@@ -9,10 +9,11 @@
 
 
 :root {
-  --header-color: #df9954;
-  --main-color : #efb77f;
+  --footer-color: #161cb5;
+  --header-color:#161cb5 ;
+  --main-color : #F8F6F0;
   --font-color : #4A4033;
-  --jap-color : #B45419;
+  --jap-color :#da010a;
 
   --title-font : "Jost", serif;
   --body-font : "Merriweather", serif;
@@ -309,7 +310,7 @@ button{
 }
 
 button:hover {
-  background: #5e1a13;
+  background: var(--jap-color);
 }
 
 

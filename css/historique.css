@@ -14,10 +14,11 @@
 
 
 :root {
-  --header-color: #9F563A;
-  --main-color : #F3E8D5;
+  --footer-color: #161cb5;
+  --header-color:#161cb5 ;
+  --main-color : #F8F6F0;
   --font-color : #4A4033;
-  --jap-color : #9E3D2F;
+  --jap-color :#da010a;
 
   --title-font : "Jost", serif;
   --body-font : "Merriweather", serif;
@@ -352,7 +353,7 @@ section:last-child::after{
   align-items: start;
 
   width: 100%;
-  height: 100%;
+  height: max-content;
   gap: 10px;
 
   margin-bottom: 5rem;

@@ -12,12 +12,11 @@
 
 
 :root {
-  --header-color:/* #a32e23f7 ROUGE VIF*/ /*#c57112 ORANGE VIF*/ #035882 /*BLEU PROFOND*/ /* #2D6D4B VERT PROFOND*/ 
- /* #77428D VIOLET SATURE*/;
-  --footer-color:/*BEIGE CLAIR  #e5c9a2*/ /*JAUNE CLAIR #e7d659 */ /* #A59ACA VIOLET LIGHT*/ #035882;
+  --footer-color: #161cb5;
+  --header-color:#161cb5 ;
   --main-color : #F8F6F0;
   --font-color : #4A4033;
-  --jap-color :#a32e23f7;
+  --jap-color :#da010a;
 
   --title-font : "Jost", serif;
   --body-font : "Merriweather", serif;
@@ -35,7 +34,7 @@ body {
 
     display: flex;
     flex-direction: column; 
-    background-color: #9F563A;
+   
 }
 
 main {
@@ -55,7 +54,7 @@ main {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    background: #8249037c; 
+    background: #633b3ca7; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,6 +278,7 @@ section.visible {
 .post-insta-description {
     width: 500px;
     font-size: 14px;
+    color: #5D3A1A;
     text-align: center;
     letter-spacing: 2px;
     font-weight: 700;
@@ -322,7 +322,7 @@ margin-bottom: 2rem;
 .atelier-titre h1 {
     font-family:var(--jap-font);
     font-size: 4rem;
-    color: var(--header-color);
+    color: var(--jap-color);
     font-weight: 900;
 
 

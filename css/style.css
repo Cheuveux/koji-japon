@@ -12,12 +12,11 @@
 
 
 :root {
-  --header-color:/* #a32e23f7 ROUGE VIF*/ /*#c57112 ORANGE VIF*/ #035882 /*BLEU PROFOND*/ /* #2D6D4B VERT PROFOND*/ 
- /* #77428D VIOLET SATURE*/;
-  --footer-color:/*BEIGE CLAIR  #e5c9a2*/ /*JAUNE CLAIR #e7d659 */ /* #A59ACA VIOLET LIGHT*/ #035882;
+  --footer-color: #161cb5;
+  --header-color:#161cb5 ;
   --main-color : #F8F6F0;
   --font-color : #4A4033;
-  --jap-color :#a32e23f7;
+  --jap-color :#da010a;
 
   --title-font : "Jost", serif;
   --body-font : "Merriweather", serif;

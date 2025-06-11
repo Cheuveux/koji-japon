@@ -9,15 +9,16 @@
 
 
 :root {
-    --header-color: #9F563A;
-    --main-color : #F3E8D5;
-    --font-color : #4A4033;
-    --jap-color : #9E3D2F;
-  
-    --title-font : "Jost", serif;
-    --body-font : "Merriweather", serif;
-    --jap-font : "M PLUS 1 CODE", sans-serif;
-  }
+  --footer-color: #161cb5;
+  --header-color:#161cb5 ;
+  --main-color : #F8F6F0;
+  --font-color : #4A4033;
+  --jap-color :#da010a;
+
+  --title-font : "Jost", serif;
+  --body-font : "Merriweather", serif;
+  --jap-font : "M PLUS 1 CODE", sans-serif;
+}
   main {
     opacity: 0;
     transform: translateY(10px);
