@@ -295,13 +295,13 @@ body a {
     .icone-vente {
         display: flex;
       
-        height: 200px;
+        height: 220px;
         width: 250px;
 
-        border: 2px solid #ffe5fd; 
+        border: 2px solid var(--jap-color); 
         border-radius: 10px; 
         padding: 20px;
-        background-color: #FFF; 
+        background-color: var(--main-color); 
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
         transition: transform 0.2s, box-shadow 0.2s; 
         
@@ -421,19 +421,20 @@ body a {
     }
    
     .illu-lien {
-        display: flex;
-        justify-content: center;
-        padding: 0 4em 0 2em ;
-       
-        
-        height: auto;
-        
+    display: flex;
+  
+    padding: 0;
+    height: auto;
+    width: 100%;
+
     }
 
     .illu-lien img {
         width: 110px;
         height: 200px;
-    }
+        margin: 0 5px;
+}
+    
     
 
     .illu-lien > img {
@@ -443,8 +444,8 @@ body a {
 
     .illu-lien img:first-child {
         position: absolute;
-        top: 32%;
-        left: 40%;
+        top: 35%;
+        left: 35%;
     }
     .miaous {
         display: none;
@@ -564,12 +565,12 @@ body a {
     
     .icone-vente {
         display: flex;
-        height: 120px; 
+        height: 90px; 
         width: 105px; 
-        border: 2px solid #8B4513; 
+        border: 2px solid var(--jap-color); 
         border-radius: 10px; 
         padding: 10px;
-        background-color: #f3e0d5; 
+        background-color: var(--main-color); 
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); 
         transition: transform 0.2s, box-shadow 0.2s; 
       }

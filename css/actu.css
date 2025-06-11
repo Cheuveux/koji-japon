@@ -501,8 +501,8 @@ margin-bottom: 2rem;
    
   }
   .spinner {
-    width: 105px;
-    height: 155px;
+    width: 85px;
+    height: 105px;
     animation: spin 1.5s linear infinite;
     display: flex;
     justify-content: center;
@@ -569,7 +569,8 @@ margin-bottom: 2rem;
     height: 20vh;
 
     top: 33%;
-    right: 0%;
+    right: 1%;
+
 }
 
 .text-content p:last-child {
@@ -588,8 +589,8 @@ margin-bottom: 2rem;
 
     .post-insta {
         margin-top: 2rem;
-        width: 80%;
-        height: 80%;
+        width: 100%;
+        height: 100%;
 
         object-fit: contain;
     
@@ -604,8 +605,8 @@ margin-bottom: 2rem;
     
     
     .instagram-media {
-        width: 350px;
-        height: 350px;
+        width: 450px;
+        height: 450px;
     }
 
     .post-insta-description {

@@ -786,12 +786,12 @@ section:nth-child(2){
 }
 
 .img-slide {
-    
+    position: relative;
     display: none;
     margin-top: 10px;
     margin-bottom: 5rem;
     width: 300px;
-    height: 39vh;
+    height: 36vh;
 
     
 }
