@@ -19,6 +19,7 @@
   --body-font : "Merriweather", serif;
   --jap-font : "M PLUS 1 CODE", sans-serif;
 }
+
   main {
     opacity: 0;
     transform: translateY(10px);

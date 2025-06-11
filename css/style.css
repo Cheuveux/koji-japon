@@ -340,14 +340,7 @@ border-bottom: solid var(--jap-color) 12px;
   
   }
 
-  .icone-reseaux svg{
-  
-    filter: brightness(0) invert(1);
-    height: 125px;
-    width: 125px;
-  
-  
-  }
+
   
   
  
@@ -617,9 +610,9 @@ border-bottom: solid var(--jap-color) 12px;
 
   .liens-footer {
     margin-left: 0;
-    gap: 10px;
+    gap: 20px;
     font-size: 12px;
-    margin-left: 5px;
+    margin-left: 15px;
 
     margin-bottom: 0%;
     font-weight: 700;
@@ -630,8 +623,8 @@ border-bottom: solid var(--jap-color) 12px;
 
   .icone-reseaux {
   
-    height: 15px;
-    width: 15px;
+    height: 30px;
+    width: 30px;
   
   
   }
