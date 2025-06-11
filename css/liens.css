@@ -461,7 +461,7 @@ body a {
     .lien-titre h1 {
         font-family:var(--jap-font);
         font-size: 2.3rem;
-        color: var(--header-color);
+        color: var(--jap-color);
         width: 90%;
         height: 5rem;
        
